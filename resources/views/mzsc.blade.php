@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+        <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
 <head>
     <title>魅族商城</title>
     <link rel="stylesheet" type="text/css" href="./css/mzsc.css">
     <script type="text/javascript"  src="./js/mzsc.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
 
 </head>
@@ -18,7 +22,9 @@
 
 <div class="ys">
     <div class="ysjzk">
-
+        <form action="">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+        </form>
         <div class="yszb  fl">
 
             <div class="meizu  fl">
@@ -70,10 +76,19 @@
             </div>
             <div class="grzx fl">
 
-                <div id="grzx1" class="grzx1">
-                    <a href="{{url('/land')}}"><img src="./img/8.png"></a>
+                <div onmouseover="d()" id="grzx1" class="grzx1">
+                    <?php if(isset($_SESSION['user'])){ ?>
+                        <?php echo $_SESSION['user']['name'] ?>
+                    <?php }else{ ?>
+                        <a href="{{url('/land')}}"><img src="./img/8.png"></a>
+                    <?php } ?>
 
                 </div>
+                <script>
+                    function d() {
+
+                    }
+                </script>
 
             </div>
             <div class="gwc fl">

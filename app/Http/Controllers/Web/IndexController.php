@@ -4,6 +4,7 @@
 namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use App\Models\Users;
 
 class IndexController extends Controller
@@ -22,7 +23,18 @@ class IndexController extends Controller
     public function mzsc(){
         return view('mzsc');
     }
-    public function land(){
+    public function user_r(){
+        return view('user_r');
+    }
+    public function user_l(){
+        return view('user_l');
+    }
+    public function register(){
+        return view('register');
+    }
+    public function land(Request $request){
+//        $name = $request->input('name');
+//        $name = $_POST('name');
         return view('land');
     }
     public function my_two(){

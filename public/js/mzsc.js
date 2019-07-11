@@ -5,17 +5,12 @@ function grzx1(){
 function aaa(){
     alert('00');
 }
-function c(){
-    $("#main_input_password").attr("type","text");
-}
-var isShow=true;
-function change(){
-    var v=document.getElementById("ps");
-    if (isShow) {
-        v.type="text";
-        isShow=false;
-    }else{
-        v.type="password";
-        isShow=true;
+
+
+
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
-}
+});

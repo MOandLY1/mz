@@ -26,4 +26,7 @@ Route::group(['namespace'=>'Web'],function (){
     Route::match(['post','get'],'/home/home/home','IndexController@home');
     Route::match(['post','get'],'my_two','IndexController@my_two');
     Route::match(['post','get'],'mzsc','IndexController@mzsc');
+    Route::match(['post','get'],'register','IndexController@register');
+    Route::match(['post','get'],'user_r','IndexController@user_r');
+    Route::match(['post','get'],'user_l','IndexController@user_l');
 });
