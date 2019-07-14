@@ -29,4 +29,7 @@ Route::group(['namespace'=>'Web'],function (){
     Route::match(['post','get'],'register','IndexController@register');
     Route::match(['post','get'],'user_r','IndexController@user_r');
     Route::match(['post','get'],'user_l','IndexController@user_l');
+    Route::match(['post','get'],'mzsc1','IndexController@mzsc1');
+
+    Route::match(['post','get'],'error','IndexController@error');
 });

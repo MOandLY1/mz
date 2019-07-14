@@ -1,7 +1,4 @@
-<?php
-session_start();
-?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <meta charset="utf-8">
 <head>
@@ -77,8 +74,8 @@ session_start();
             <div class="grzx fl">
 
                 <div onmouseover="d()" id="grzx1" class="grzx1">
-                    <?php if(isset($_SESSION['user'])){ ?>
-                        <?php echo $_SESSION['user']['name'] ?>
+                    <?php if($is_login==1){ ?>
+                        <?php echo $user_info['name'];echo $a; ?>
                     <?php }else{ ?>
                         <a href="{{url('/land')}}"><img src="./img/8.png"></a>
                     <?php } ?>
@@ -104,6 +101,7 @@ session_start();
 
 
 <div class="mztj bg">
+
 </div>
 
 
@@ -146,17 +144,39 @@ session_start();
 </div>
 
 <div class="rptj ">
-    <div class="rptj1"></div>
-    <div class="rptj2">
-        <ul class="rptj2-1">
-            <li class="rptj2-1-5 fl"></li>
-            <li class="rptj2-1-5 fl"></li>
-            <li class="rptj2-1-5 fl"></li>
-            <li class="rptj2-1-5 fl"></li>
-            <li class="rptj2-1-5 fl"></li>
-        </ul>
-    </div>
+    <div class="rptj1">
+        <div class="rptj1-1 fl">
 
+            <div class="rptj1-1-1 fl">热品推荐</div>
+            <div class="rptj1-1-2 fr">
+                <img src="./img/18.png">
+                <img src="./img/19.png">
+            </div>
+        </div>
+    </div>
+    <div class="rptj2">
+        <div class="rptj3">
+            <ul class="rptj3-1">
+                <li class="rptj3-1-5 rptj3-1-1 fl">
+                    <a href="https://detail.meizu.com/item/meilans6.html?click=store_index_rp_1_1">
+                        <img src="./img/rptj/rptj1.png">
+                    </a>
+                </li>
+                <li class="rptj3-1-5 fl">
+                    <img src="./img/rptj/rptj2.png">
+                </li>
+                <li class="rptj3-1-5 fl">
+                    <img src="./img/rptj/rptj3.png">
+                </li>
+                <li class="rptj3-1-5 fl">
+                    <img src="./img/rptj/rptj4.png">
+                </li>
+                <li class="rptj3-1-5 fl">
+                    <img src="./img/rptj/rptj5.png">
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 
