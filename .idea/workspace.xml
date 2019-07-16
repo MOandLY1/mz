@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/resources/views/land.blade.php" line="20" />
+    <bookmark url="file://$PROJECT_DIR$/resources/views/land.blade.php" line="22" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96438a2d-a764-4a2f-b1c8-3ef45626e1b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/mzsc.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/mzsc.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/land.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/land.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/mzsc1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/mzsc1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/mzsc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/mzsc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/land.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/land.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mzsc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mzsc.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user_l.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user_l.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mzsc1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mzsc1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +46,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="55" column="49" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="49" />
+            <state relative-caret-position="587">
+              <caret line="99" column="26" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="26" />
+              <folding>
+                <element signature="e#44#80#0#PHP" expanded="true" />
+                <element signature="e#3497#4662#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1654">
+              <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
               <folding>
                 <element signature="e#44#80#0#PHP" expanded="true" />
               </folding>
@@ -54,50 +69,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/mzsc1.blade.php">
+        <entry file="file://$PROJECT_DIR$/public/js/mzsc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="347">
+              <caret line="153" selection-start-line="153" selection-end-line="157" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/Personal_Center.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="217" column="20" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Personal_Center.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="140" column="54" selection-start-line="140" selection-start-column="54" selection-end-line="140" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/web.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="116" column="17" lean-forward="true" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/test.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding>
-                <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#5;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#6;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#7;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#50#80#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/mzsc1.css">
+        <entry file="file://$PROJECT_DIR$/resources/views/mzsc1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1731">
-              <caret line="320" column="4" selection-start-line="320" selection-start-column="4" selection-end-line="320" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/mzsc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/error.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="11" />
+            <state>
+              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/mzsc.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state relative-caret-position="280">
+              <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="78" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -114,24 +140,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+            <state relative-caret-position="547">
+              <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/land.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/user_l.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -146,8 +158,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>grzx1</find>
-      <find>user_l</find>
       <find>background</find>
+      <find>account_status</find>
+      <find>color</find>
+      <find>Account_security_details</find>
+      <find>user_l</find>
+      <find>Account_security_details_</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -161,22 +177,28 @@
         <option value="$PROJECT_DIR$/resources/views/admin.blade.php.html" />
         <option value="$PROJECT_DIR$/app/Models/Users.php" />
         <option value="$PROJECT_DIR$/resources/views/my_two.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/land.css" />
-        <option value="$PROJECT_DIR$/public/js/mzsc.js" />
         <option value="$PROJECT_DIR$/public/css/register.css" />
         <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user_r.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/land.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mzsc1.block.php" />
         <option value="$PROJECT_DIR$/public/css/mzsc1.blade.css" />
-        <option value="$PROJECT_DIR$/resources/views/mzsc.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user_l.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/error.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/IndexController.php" />
         <option value="$PROJECT_DIR$/public/css/mzsc.css" />
+        <option value="$PROJECT_DIR$/public/css/land.css" />
+        <option value="$PROJECT_DIR$/resources/views/land.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/mzsc.blade.php" />
         <option value="$PROJECT_DIR$/public/css/mzsc1.css" />
+        <option value="$PROJECT_DIR$/public/css/Personal_Center.css" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/userController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/UserController.php" />
+        <option value="$PROJECT_DIR$/public/js/mzsc.js" />
+        <option value="$PROJECT_DIR$/resources/views/Personal_Center.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mzsc1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/test.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/IndexController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/web.blade.php" />
       </list>
     </option>
   </component>
@@ -265,10 +287,10 @@
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="304" />
-    <option name="y" value="14" />
-    <option name="width" value="1612" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="182" />
+    <option name="y" value="23" />
+    <option name="width" value="1653" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -401,18 +423,18 @@
       <updated>1562677723756</updated>
       <workItem from="1562677725068" duration="6270000" />
       <workItem from="1562755071800" duration="121000" />
-      <workItem from="1562755228126" duration="72395000" />
+      <workItem from="1562755228126" duration="127712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78786000" />
+    <option name="totallyTimeSpent" value="134103000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="304" y="14" width="1612" height="1000" extended-state="1" />
+    <frame x="182" y="23" width="1653" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20618556" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20087884" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -550,13 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/land.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1570" />
@@ -630,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user_r.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
@@ -665,30 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user_l.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/land.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mzsc.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/mzsc.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-840">
@@ -696,15 +680,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="55" column="49" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="49" />
-          <folding>
-            <element signature="e#44#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/resources/views/user_l.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/error.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -713,37 +690,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mzsc1.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/land.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#7;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/land.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mzsc.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="78" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/mzsc1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1731">
-          <caret line="320" column="4" selection-start-line="320" selection-start-column="4" selection-end-line="320" selection-end-column="4" />
+        <state>
+          <caret selection-end-line="491" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Modify_personal_information.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mzsc1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Personal_Center.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="140" column="54" selection-start-line="140" selection-start-column="54" selection-end-line="140" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1654">
+          <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+          <folding>
+            <element signature="e#44#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="99" column="26" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="26" />
+          <folding>
+            <element signature="e#44#80#0#PHP" expanded="true" />
+            <element signature="e#3497#4662#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/Personal_Center.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="217" column="20" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/test.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#50#80#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/mzsc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="347">
+          <caret line="153" selection-start-line="153" selection-end-line="157" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/web.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="116" column="17" lean-forward="true" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
         </state>
       </provider>
     </entry>

@@ -32,4 +32,8 @@ Route::group(['namespace'=>'Web'],function (){
     Route::match(['post','get'],'mzsc1','IndexController@mzsc1');
 
     Route::match(['post','get'],'error','IndexController@error');
+    Route::match(['post','get'],'Personal_Center','IndexController@Personal_Center');
+    Route::match(['post','get'],'Modify_personal_information','UserController@Modify_personal_information');
+    Route::match(['post','get'],'Binding_Mailbox','UserController@Binding_Mailbox');
+    Route::match(['post','get'],'binding_phone','UserController@binding_phone');
 });

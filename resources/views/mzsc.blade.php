@@ -81,11 +81,6 @@
                     <?php } ?>
 
                 </div>
-                <script>
-                    function d() {
-
-                    }
-                </script>
 
             </div>
             <div class="gwc fl">

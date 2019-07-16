@@ -23,14 +23,15 @@ class IndexController extends Controller
     }
     public function mzsc(Request $request){
 //        $user = Users::where('id',4)->first()->toArray();
-//        $sql = "select * from user where id=4";
+//        $sql = "select * from user where id=4" limit 1;
 
         $user = Users::where('id',4)->select('id','name','age')->first()->toArray();
-//        $sql = "select id,name,age from user where id=4"
+//        $sql = "select id,name,age from user where id=4 limit 1"
 //        $array = ['usre'=>$user];
 //        session($array);
         $is_login = 0;
         session(['user'=>$user]);           //设置session
+
 
         $user_info = [];
         $user = session('user');        //取出session
@@ -51,12 +52,29 @@ class IndexController extends Controller
     public function user_l(Request $request){
         $name = $request->input('name');
         $password = $request->input('password');
+        $password = md5($password);
         $user = Users::where('name',$name)->first();
+
         if (!$user){
-            return redirect('land')->with('status', '用户不存在!');
-//            return  redirect("error?url=land");
+            $array = [
+                'code'=>0,
+                'info'=>'不存在该用户'
+            ];
+            return response()->json($array);
         }
+//      对象转数组
         $user = $user->toArray();
+        if ($user['password']!=$password){
+            $array = ['code'=>0, 'info'=>'密码错误'];
+            return response()->json($array);
+        }
+        session(['user'=>$user]);       //设置session
+
+        $array = [
+            'code'=>1,
+            'info'=>'登录成功'
+        ];
+        return response()->json($array);
 
     }
 
@@ -68,13 +86,38 @@ class IndexController extends Controller
     public function register(){
         return view('register');
     }
-    public function mzsc1(){
-        return view('mzsc1');
+    public function mzsc1(Request $request){
+        $user_info = [];
+        $user = session('user');        //取出session
+        if ($user){
+            $is_login = 1;
+            $user_info = $user;
+        }
+        $a = 1;
+        $shop = [
+            'img'=>'233'
+        ];
+        return view('mzsc1',['user_info'=>$user_info,'a'=>$a,]);
+
+
     }
     public function land(Request $request){
 //        $name = $request->input('name');
 //        $name = $_POST('name');
         return view('land');
+    }
+    public function Personal_Center(Request $request){
+        $user_info = [];
+        $user = session('user');        //取出session
+        if ($user){
+            $is_login = 1;
+            $user_info = $user;
+        }
+        $a = 1;
+        $shop = [
+            'img'=>'233'
+        ];
+        return view('Personal_Center',['is_login'=>$is_login,'user_info'=>$user_info,'a'=>$a,]);
     }
     public function my_two(){
         $user = Users::where('id',1)->get()->toArray();
@@ -86,6 +129,57 @@ class IndexController extends Controller
         $name = 'aaaa';
 
         return view('my_two',['user_aa'=>$user,'name'=>$name]);
+    }
+    public function Modify_personal_information(Request $request){     //处理来自个人主页的修改内容
+        $password = $request->input('password');
+        $confirm_password = $request->input('confirm_password');
+        if(!$password || !$confirm_password){
+            $array = [
+                'code'=>0,
+                'info'=>'请输入密码'
+            ];
+            return response()->json($array);
+        }
+        if($password!=$confirm_password){
+            $array = [
+                'code'=>0,
+                'info'=>'两次输入的密码不一致'
+            ];
+            return response()->json($array);
+        }
+        $password = md5($password);
+
+        $id = session('user')['id'];
+        $arr = [
+            'password'=>$password
+        ];
+//        $user = Users::where('id',$id)->update(['password'=>$password]);,,和下面的是一样的，下面的是预先写在了数组里
+        $user = Users::where('id',$id)->update($arr);
+        if($user){
+            $array = [
+                'code'=>1,
+                'info'=>'修改成功'
+            ];
+            return response()->json($array);
+        }
+
+
+
+        if (!$user){
+            $array = [
+                'code'=>0,
+                'info'=>'不存在该用户'
+            ];
+            return response()->json($array);
+        }
+//      对象转数组
+        $user = $user->toArray();
+        if ($user['password']!=$password){
+            $array = ['code'=>0, 'info'=>'密码错误'];
+            return response()->json($array);
+        }
+
+
     }
 
 }
