@@ -6,10 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Users;
+use App\Models\Navigation;
 use Illuminate\Support\Facades\Session;
 
 class IndexController extends Controller
 {
+
+    public function Commodity_details(){
+        return view('Commodity_details');
+    }
+
     public function index(){
         echo "success";
     }
@@ -20,6 +26,16 @@ class IndexController extends Controller
 
     public function home(){
         return view('home');
+    }
+    public function search(){
+        return view('search');
+    }
+    public function Navigation_mzsc(){
+        $Navigation_mzsc = Navigation::where('name','魅族商城')->first()->toArray(); //查询
+//       var_dump($Navigation_mzsc);exit;
+        return view('layouts.web',['Navigation_mzsc'=>$Navigation_mzsc]);
+
+//        return view('mzsc',['is_login'=>$is_login,'user_info'=>$user_info,'shop'=>$shop]);
     }
     public function mzsc(Request $request){
 //        $user = Users::where('id',4)->first()->toArray();
@@ -65,7 +81,9 @@ class IndexController extends Controller
 //      对象转数组
         $user = $user->toArray();
         if ($user['password']!=$password){
-            $array = ['code'=>0, 'info'=>'密码错误'];
+            $array = ['code'=>0,
+                'info'=>'密码错误'
+            ];
             return response()->json($array);
         }
         session(['user'=>$user]);       //设置session
@@ -85,6 +103,9 @@ class IndexController extends Controller
     }
     public function register(){
         return view('register');
+    }
+    public function ceshi(){
+        return view('ceshi');
     }
     public function mzsc1(Request $request){
         $user_info = [];

@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,47 +12,48 @@
     <script src="./js/mzsc.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <div class="header">                   <!--头部-->
+<div class="header">                   <!--头部-->
 
-        <div class="nav">                                           <!--导航条-->
-            <div class="header_left fl">
-                <div class="header_nav fl">
-                    <img src="./img/1.png" alt="">
-                </div>
-                <div class="header_menu fl">魅族商城</div>
-                <div class="header_menu fl">魅族手机</div>
-                <div class="header_menu fl">魅蓝手机</div>
-                <div class="header_menu fl">魅族声学</div>
-                <div class="header_menu fl">智能配件</div>
-                <div class="header_menu fl">服务</div>
-                <div class="header_menu fl">专卖店</div>
-                <div class="header_menu fl">Flyme</div>
-                <div class="header_menu fl">社区</div>
+    <div class="nav">                                           <!--导航条-->
+        <div class="header_left fl">
+            <div class="header_nav fl">
+                <img onclick="jump_homepage()" src="./img/1.png" alt="">
             </div>
+            <div class="header_menu fl">魅族商城</div>
+            <div class="header_menu fl">魅族手机</div>
+            <div class="header_menu fl">魅蓝手机</div>
+            <div class="header_menu fl">魅族声学</div>
+            <div class="header_menu fl">智能配件</div>
+            <div class="header_menu fl">服务</div>
+            <div class="header_menu fl">专卖店</div>
+            <div class="header_menu fl">Flyme</div>
+            <div class="header_menu fl">社区</div>
+        </div>
 
 
-            <div class="header_right fr">
-                <div class="nav_input fl">
-                    <input class="nav_input_text" type="text">
-                    <input class="nav_input_submit" type="submit">
-                </div>
-                <div class="user_state fl">
-                    <img onmouseover="Personal_Center()" onmouseout="Personal_Center_()" src="./img/8.png" alt="">
-                </div>
-                <?php if($is_login==1){ ?>
-                <div onmouseout="user_state_details()"  id="user_state_details" class="user_state_details_">用户：<?php echo $user_info['name']; ?><br>注销登录</div>
+        <div class="header_right fr">
+            <div class="nav_input fl">
+                <input class="nav_input_text" type="text">
+                <input class="nav_input_submit" type="submit">
+            </div>
+            <div class="user_state fl">
+                <img onmouseover="Personal_Center()" onmouseout="Personal_Center_()" src="./img/8.png" alt="">
+            </div>
+            <?php if($is_login==1){ ?>
+            <div onmouseout="user_state_details()"  id="user_state_details" class="user_state_details_">用户：<?php echo $user_info['name']; ?><br>注销登录</div>
 
-                <?php }else{ ?>
-                <div onmouseout="user_state_details()" onclick="Jump_land()" id="user_state_details" class="user_state_details">未登录，点击登录</div>
-                <?php }?>
+            <?php }else{ ?>
+            <div onmouseout="user_state_details()" onclick="Jump_land()" id="user_state_details" class="user_state_details">未登录，点击登录</div>
+            <?php }?>
 
-                <div class="Shopping_Cart fl">
-                    <img src="./img/9.png" alt="">
-                </div>
+            <div class="Shopping_Cart fl">
+                <img src="./img/9.png" alt="">
             </div>
         </div>
     </div>
+</div>
+<div class="wrap">
+
 
     <div class="main">                    <!--主体-->
         <div class="main_account_management">     <!--账号管理-->
@@ -61,8 +64,14 @@
             <div class="account_status">
                 <div class="head_portrait fl"><img src="./img/34.png" ></div>
                 <div class="user fl">
-                    <div class="user_name">用户553166344 <img src="./img/35.png" alt=""></div>
-                    <div class="user_account">修改账号</div>
+
+                    <div id="user_name" class="user_name">用户**<?php echo session('user')['name'] ?> <img onclick="modify_name()" src="./img/35.png" alt=""></div>
+                    <div id="user_name_" class="user_name_">
+                        <input type="text" id="modify_name" placeholder="输入您的新用户名">
+                        <input type="button" onclick="New_username()" value="提交">
+                        <input type="button" onclick="modify_name_()" value="取消">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -70,6 +79,7 @@
         <div class="main_account_security">              <!--账号安全-->
             <div class="account_security">账号安全</div>
             <div class="account_security_details">
+
 
 
                 <div id="Change_Password" class="Account_security_details">
@@ -91,7 +101,7 @@
                 </div>
 
 
-
+            <?php if(empty(session('user')['mailbox'])){ ?>
                 <div id="Change_security" class="Account_security_details">
                     <div class="Account_security_name fl">邮箱</div>
                     <div class="Account_security_centent fl">未绑定</div>
@@ -107,9 +117,27 @@
                         <input onclick="Change_Mailbox_()" type="button" value="取消">
                     </div>
                 </div>
+            <?php }else{ ?>
+                <div id="Change_security" class="Account_security_details">
+                    <div class="Account_security_name fl">邮箱</div>
+                    <div class="Account_security_centent fl">已绑定</div>
+                    <div onclick="Change_Mailbox()" class="Account_security_modify fl">修改</div>
+                </div>
+
+                <div id="Change_security_" class="Account_security_details_">
+                    <div>修改绑定邮箱</div>
+                    <div>
+                        <input type="text" id="mailbox" placeholder="<?php echo session('user')['mailbox'] ?>">
+                        <br>
+                        <input type="button" onclick="Binding_Mailbox()" value="确认">
+                        <input onclick="Change_Mailbox_()" type="button" value="取消">
+                    </div>
+                </div>
+            <?php }?>    <!--邮箱-->
 
 
 
+            <?php if(empty(session('user')['phone'])){ ?>
                 <div id="Change_phone" class="Account_security_details">
                     <div class="Account_security_name fl">手机号码</div>
                     <div class="Account_security_centent fl">未绑定</div>
@@ -125,9 +153,27 @@
                         <input onclick="Change_phone_()" type="button" value="取消">
                     </div>
                 </div>
+            <?php }else{ ?>
+                <div id="Change_phone" class="Account_security_details">
+                    <div class="Account_security_name fl">手机号码</div>
+                    <div class="Account_security_centent fl">已绑定</div>
+                    <div onclick="Change_phone()" class="Account_security_modify fl">修改</div>
+                </div>
+
+                <div id="Change_phone_" class="Account_security_details_">
+                    <div>修改绑定手机</div>
+                    <div>
+                        <input id="phone" type="text" placeholder="<?php echo session('user')['phone'] ?>">
+                        <br>
+                        <input onclick="binding_phone()" type="button" value="确认">
+                        <input onclick="Change_phone_()" type="button" value="取消">
+                    </div>
+                </div>
+            <?php } ?>       <!--手机-->
 
 
 
+            <?php if(empty(session('user')['phone'])){ ?>
                 <div id="Change_Password_insurance" class="Account_security_details">
                     <div class="Account_security_name fl">密保问题
                     </div>
@@ -140,12 +186,32 @@
                     <div>
                         <input id="Password_Protection" type="text" placeholder="输入密保问题">
                         <br>
-                        <input type="text" placeholder="输入密保答案">
+                        <input id="Password_Protection_Answers" type="text" placeholder="输入密保答案">
                         <br>
-                        <input type="button" value="确认">
+                        <input onclick="Submission_Password_protection()" type="button" value="确认">
                         <input onclick="Change_Password_insurance_()" type="button" value="取消">
                     </div>
                 </div>
+            <?php  }else{  ?>
+                <div id="Change_Password_insurance" class="Account_security_details">
+                    <div class="Account_security_name fl">密保问题
+                    </div>
+                    <div class="Account_security_centent fl">已设置</div>
+                    <div onclick="Change_Password_insurance()" class="Account_security_modify fl">修改</div>
+                </div>
+
+                <div id="Change_Password_insurance_" class="Account_security_details_">
+                    <div>修改密保</div>
+                    <div>
+                        <input id="Password_Protection" type="text" placeholder="<?php echo session('user')['Password_insurance'] ?>">
+                        <br>
+                        <input id="Password_Protection_Answers" type="text" placeholder="<?php echo session('user')['Password_Protection_Answers'] ?>">
+                        <br>
+                        <input onclick="Submission_Password_protection()" type="button" value="确认">
+                        <input onclick="Change_Password_insurance_()" type="button" value="取消">
+                    </div>
+                </div>
+            <?php } ?>          <!--密保-->
             </div>
         </div>
 

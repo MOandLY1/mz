@@ -1,4 +1,15 @@
+<?php
+use App\Models\Navigation;
+$Navigation_mzsc = Navigation::where('Superior_id','0')->get()->toArray(); //查询
 
+foreach ($Navigation_mzsc as $key =>$value){
+    $secondary = Navigation::where('Superior_id',$value['id'])->get()->toArray();
+    $Navigation_mzsc[$key]['secondary'] = $secondary;
+}
+//echo "<pre>";
+//var_dump($Navigation_mzsc);
+//exit;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,23 +22,39 @@
 </head>
 <body>
 <div class="header">                   <!--头部-->
-    <div id="Advertisement" class="Advertisement"><img src="./img/6.png">
-        <div id="Advertisement_Close" onclick="Advertisement_Close()" class="Advertisement_Close"><img src="./img/32.png" alt=""></div></div>  <!--页首广告-->
+
 
     <div class="nav">                                           <!--导航条-->
         <div class="header_left fl">
             <div class="header_nav fl">
-                <img src="./img/1.png" alt="">
+                <img onclick="jump_homepage()" src="./img/1.png" alt="">
             </div>
-            <div class="header_menu fl">魅族商城</div>
-            <div class="header_menu fl">魅族手机</div>
-            <div class="header_menu fl">魅蓝手机</div>
-            <div class="header_menu fl">魅族声学</div>
-            <div class="header_menu fl">智能配件</div>
-            <div class="header_menu fl">服务</div>
-            <div class="header_menu fl">专卖店</div>
-            <div class="header_menu fl">Flyme</div>
-            <div class="header_menu fl">社区</div>
+
+
+            <?php $a = 0; ?>
+        <?php foreach ($Navigation_mzsc as $key => $value){ ?>
+            <?php $a++; ?>
+            <div   onmouseover="Secondary_navigation(<?php echo $a; ?>)" onmouseout="Secondary_navigation_()"  class="header_menu fl a"><?php echo $value['name'] ?></div>
+
+
+
+            <div onmouseout="leave_secondary_nav()" class="Secondary_navigation <?php echo $a.'bb' ?>"><!--二级导航栏，绝对定位块-->
+                <?php foreach ($value['secondary'] as $k=>$v){ ?>
+                <div class="secondary_nav fl">  {{$v['name']}}  </div>
+                    <?php } ?>
+            </div>
+
+
+        <?php } ?>
+
+
+{{--            <div class="header_menu fl">魅蓝手机</div>--}}
+{{--            <div class="header_menu fl">魅族声学</div>--}}
+{{--            <div class="header_menu fl">智能配件</div>--}}
+{{--            <div class="header_menu fl">服务</div>--}}
+{{--            <div class="header_menu fl">专卖店</div>--}}
+{{--            <div class="header_menu fl">Flyme</div>--}}
+{{--            <div class="header_menu fl">社区</div>--}}
         </div>
 
 
@@ -40,7 +67,7 @@
                 <img onmouseover="Personal_Center()" onmouseout="Personal_Center_()" src="./img/8.png" alt="">
             </div>
             <?php if(session('user')){ ?>
-            <div onmouseout="user_state_details()"  id="user_state_details" class="user_state_details_">用户：<?php echo $user_info['name']; ?><br>注销登录</div>
+            <div onmouseout="user_state_details()" onclick="Jump_Personal_Center()"  id="user_state_details" class="user_state_details_">用户：<br>个人中心</div>
 
             <?php }else{ ?>
             <div onmouseout="user_state_details()" onclick="Jump_land()" id="user_state_details" class="user_state_details">未登录，点击登录</div>
@@ -62,27 +89,6 @@
 
 
 <div class="footer">                               <!--底部-->
-    <div class="footer_main">
-        <div class="footer_l fl">
-            <div class="footer_left_t">
-                <div class="footer_left_top fl">顺丰包邮</div>
-                <div class="footer_left_top fl">100+城市次日送达</div>
-                <div class="footer_left_top fl">7天无理由退货</div>
-                <div class="footer_left_top fl">15天换货保障</div>
-            </div>
-            <div class="footer_left_b">
-                <div class="footer_left_bottom fl">1年免费保修</div>
-                <div class="footer_left_bottom fl">2300+线下体验店</div>
-                <div class="footer_left_bottom fl">远程支持服务</div>
-                <div class="footer_left_bottom fl">上门快修</div>
-            </div>
-        </div>
-        <div class="footer_r fr">
-            <div class="footer_r_1 "><div class="fr">24小时全国服务热线</div></div>
-            <div class="footer_r_2 "><div class="fr">400-788-3333</div></div>
-            <div class="footer_r_3"><div class="fr"><img src="./img/yw/yw2.png"></div></div>
-        </div>
-    </div>
 
     <div class="footer_footer">
         <div class="footer_footer_t">

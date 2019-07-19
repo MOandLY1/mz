@@ -34,7 +34,12 @@
 .wrap{                    /*外套*/
     width:100%;
     height:100%;
-    background-color: #F5F5F5;
+
+}
+.wrap1{                    /*外套*/
+    width:100%;
+    height:100%;
+    background:#f5f5f5;
 }
 .header{                 /*头部*/
     width: 100%;
@@ -72,6 +77,32 @@
     height: 80px;
     line-height:80px;
     margin-left: 20px;
+    displey: block;
+    background: white;
+}
+.Secondary_navigation{              /*分页上的次级导航条，为鼠标移动事件显示的绝对定位块*/
+     display: none;
+     width:1265px;
+     height:200px;
+     background: white;
+     position: absolute;
+     left: 300px;
+     top: 80px;
+ }
+ .Secondary_navigation_{              /*主页上的次级导航条，为鼠标移动事件显示的绝对定位块*/
+     display: none;
+     width:1265px;
+     height:200px;
+     background: white;
+     position: absolute;
+     left: 300px;
+     top: 208px;
+ }
+.secondary_nav{                 /* 次级导航里面的具体导航内容*/
+    width: 150px;
+    height: 200px;
+    line-height:50px;
+
 }
 .header_right{                 /*头部的右边*/
     width: 330px;
@@ -398,10 +429,13 @@
     height:50px;
 }
 
+.layout{                /*布局填充*/
+    width: 1265px;
+    height: 40px;
+}
 
 .footer{                                /*底部*/
     width: 100%;
-    height: 300px;
     margin: 0 auto;
     background-color: #FFFFFF;
 }
@@ -490,3 +524,207 @@
 .footer_footer_bottom_r{
     line-height:50px;
 }
+
+
+
+/*详情页面*/
+.Details_page_main{                   /*详情页面主体*/
+    width: 1265px;
+    height: 700px;
+    margin: 0 auto;
+}
+.Details_page_main_left{               /*详情页面左边*/
+    width: 600px;
+    height: 700px;
+}
+.Details_page_main_left_centent{                  /*详情页面商品大图*/
+    width: 600px;
+    height: 580px;
+}
+.Details_page_main_left_centent_Small{                  /*详情页面商品可切换的小图*/
+    width: 600px;
+    height: 150px;
+}
+.Details_page_main_left_centent_Small_{                  /*详情页面商品可切换的小图*/
+    width: 120px;
+    height: 120px;
+    margin-left: 24px;
+}
+.Details_page_main_right{                 /*详情页面右边*/
+    width: 660px;
+    height: 700px;
+}
+.Details_page_right_{
+    width: 660px;
+    height: 100px;
+}
+.Details_page_name{
+    width: 660px;
+    height: 70px;
+    font-size: 28px;
+    line-height: 70px;
+}
+.Details_page_Propaganda{
+    width: 660px;
+    height: 30px;
+    font-size: 14px;
+}
+.Details_page_Price{                        /*价格*/
+    width: 660px;
+    height: 100px;
+    font-size: 36px;
+    line-height: 100px;
+    background: #f6f6f6;
+    color: #e02b41;
+}
+.Details_page_classification{             /*颜色分类*/
+    width:100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 12px;
+}
+.Details_page_classification_{
+    width:200px;
+    height: 100px;
+    padding-left: 20px;
+}
+.Details_page_classification_1{
+    width:150px;
+    height: 50px;
+    margin-top: 25px;
+    border:1px solid ;
+    padding-left:50px;
+}
+.Details_page_classification_2{
+    width:50px;
+    height: 50px;
+    text-align: center;
+    line-height:40px;
+}
+
+.Details_page_Support{             /*支持*/
+    width: 400px;
+    height: 30px;
+}
+.Details_page_Support_1{
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    line-height:30px;
+}
+.Details_page_Support_2{
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+    line-height:30px;
+}
+.Details_page_service{              /*服务*/
+    width: 400px;
+    height: 70px;
+}
+.Details_page_service_1{
+    width: 400px;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    line-height:70px;
+}
+.Details_page_service_1_1{
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    line-height:70px;
+}
+.Details_page_service_1_2{
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    line-height:70px;
+    margin-left: 20px;
+}
+.Details_page_service_2{
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+    line-height:50px;
+    margin-left: 69px;
+}
+
+.Details_page_Number{              /* 数量*/
+    width:120px;
+    height: 100px;
+    line-height: 80px;
+    font-size: 12px;
+}
+.Details_page_Number_{
+    width:200px;
+    height: 100px;
+}
+.Details_page_Number_1{
+    width: 30px;
+    height: 25px;
+    border:  #f5f5f5 1px solid ;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 5px;
+    background: #f7f7f7;
+}
+.Details_page_Number_2{
+     width: 50px;
+     height: 25px;
+     margin-top: 20px;
+     text-align: center;
+     padding-top: 5px;
+     background: white;
+     border: #f5f5f5 1px solid ;
+     border-left: none;
+     border-right: none;
+ }
+
+.Details_page_purchase{              /* 购买*/
+    width:210px;
+    height:55px;
+    border: 1px solid ;
+    text-align: center;
+    margin-left: 20px;
+    line-height: 55px;
+    background: #27B3FF;
+    color: white;
+}
+.Details_page_purchase_{              /* 购买*/
+    width:210px;
+    height:55px;
+    border:1px solid ;
+    text-align: center;
+    margin-left: 20px;
+    line-height: 55px;
+    color: #27B3FF;
+}
+
+
+
+                                          /*搜索*/
+.search_header{
+    width:1265px;
+    height: 100px;
+    background: #6516f5;
+    margin: 0 auto;
+}
+.search_main{
+    width:1265px;
+    background: #f5f5f5;
+    margin: 0 auto;
+}
+.search_centent{
+    width: 300px;
+    height: 400px;
+    margin-left: 13px;
+    margin-top: 13px;
+    background: red;
+}
+
+
+
+
+

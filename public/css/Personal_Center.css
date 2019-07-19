@@ -111,7 +111,7 @@ a{
     background: white;
     position: absolute;
     left: 1430px;
-    top: 179px;
+    top: 59px;
     font-size: 15px;
     text-align: center;
     line-height: 50px;
@@ -123,7 +123,7 @@ a{
     background: white;
     position: absolute;
     left: 1430px;
-    top: 179px;
+    top: 59px;
     font-size: 15px;
     text-align: center;
     line-height: 50px;
@@ -182,10 +182,18 @@ a{
     margin-left: 15px;
 }
 .user_name{
+    display: block;
     width: 300px;
     height: 40px;
     line-height:40px;
 }
+.user_name_{
+    display: none;
+     width: 300px;
+     height: 40px;
+     line-height:40px;
+ }
+
 .user_account{
     width: 300px;
     height: 30px;
